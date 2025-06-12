@@ -1,7 +1,7 @@
 //Types in Typescript
 
 //Arrays
-let scores: number[] = [90, 80, 70];
+let scores: number[] = [901, 80, 70];
 let fruits: Array<string> = ["apple", "banana"];
 
 //Tuples
@@ -13,19 +13,19 @@ let person1: { name: string; age: number } = {
     age: 25
 };
   //Function Types
-function greet(name: string): string {
+function greet1(name: string): string {
     return `Hello, ${name}`;
 }
   
 const add = (a: number, b: number): number => a + b;
 
   // Generics
-function identity<T>(value: T): T {
+function identity1<T>(value: T): T {
     return value;
 }
   
-let num = identity<number>(5);
-let str = identity<string>("hello");
+let num = identity1<number>(5);
+let str = identity1<string>("hello");
 
   //Type Assertions
 let someValue: any = "Hello";
@@ -119,3 +119,40 @@ const macben = new Person('Macben', 20)
 macben.greet()
 macben.name      // ok macben.name is public
 // macben.age      // error macben.age is private
+
+
+//30 typescript projects
+// #1 reversing a string with typescript
+
+
+
+function reverseString(str: string): string {
+    return str.split("").reverse().join("");
+  }
+
+const reverseArray = (str: Array<string>)  => {
+  let reversed = "";
+  // for (let i = str.length - 1; i >= 0; i--) {
+  //   reversed += str[i];
+  // }
+  // return reversed;
+  for (let i = str.length -1; i >= 0; i--){
+    reversed += str[i]
+
+  }
+  console.log(reversed)
+ 
+}
+const array:Array<string> = ["macben", "akpa", "jest", "obi"]
+reverseArray(array)
+
+const reverseString1 = (str :string) :string => {
+  let reversed = ''
+  for (let i = str.length -1; i >=0; i--){
+    reversed += str[i]
+  }
+  return reversed
+}
+
+const result = reverseString1("macben")
+console.log(result)
