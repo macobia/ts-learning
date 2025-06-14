@@ -100,5 +100,25 @@ const reverseString1 = (str) => {
     }
     return reversed;
 };
-const result = reverseString1("macbem");
+const result = reverseString1("macben");
 console.log(result);
+//#2 Check if a number is even or odd
+const isEven = (num) => {
+    return num % 2 === 0;
+};
+const isOdd = (num) => {
+    return num % 2 !== 0;
+};
+const numberChecker = (num) => {
+    if (num === 0) {
+        return "even";
+    }
+    else if (isOdd(num)) {
+        return "odd";
+    }
+    else {
+        return "even";
+    }
+};
+const result2 = numberChecker(0);
+console.log(result2);

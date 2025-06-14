@@ -123,9 +123,6 @@ macben.name      // ok macben.name is public
 
 //30 typescript projects
 // #1 reversing a string with typescript
-
-
-
 function reverseString(str: string): string {
     return str.split("").reverse().join("");
   }
@@ -156,3 +153,22 @@ const reverseString1 = (str :string) :string => {
 
 const result = reverseString1("macben")
 console.log(result)
+
+//#2 Check if a number is even or odd
+const isEven = (num: number): boolean => {
+  return num % 2 === 0
+}
+const isOdd = (num: number): boolean => {
+  return num % 2 !== 0
+}
+const numberChecker = (num: number): string => {
+  if (num === 0){
+    return "even"
+  } else if (isOdd(num)){
+    return "odd"
+  } else {
+    return "even"
+  }
+}
+const result2 = numberChecker(0)
+console.log(result2)
