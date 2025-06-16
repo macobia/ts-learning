@@ -172,3 +172,29 @@ const numberChecker = (num: number): string => {
 }
 const result2 = numberChecker(0)
 console.log(result2)
+
+//Capitalize the first letter of each word
+const capitalize = (str : string) : string => {
+  const words = str.split(" ")
+  const capitalizedWords = words.map(word => {
+     return word.charAt(0).toUpperCase() + word.slice(1)
+  })
+
+  return capitalizedWords.join(" ")
+
+}
+
+const result3 = capitalize("macben john aba")
+console.log(result3)
+
+//Count vowels in a string
+const countVowels = (str : string) : number => {
+  const vowels = "aeiou"
+  const vowelsCount = str.split("").filter(letter => vowels.includes(letter)).length
+  const consonantCount = str.split("").filter(letter => !vowels.includes(letter) && /[a-z]/.test(letter)).length
+  console.log(consonantCount)
+  return vowelsCount
+}
+
+const result4 = countVowels("macben john aba")
+console.log(result4)
